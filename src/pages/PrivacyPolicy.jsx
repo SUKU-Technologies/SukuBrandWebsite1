@@ -193,7 +193,7 @@ const PrivacyPolicy = () => {
       title: "7. Cookies Policy",
       content: (
         <>
-          <p className="mb-4">Our website uses cookies to enhance your browsing experience.</p>
+          <p className="mb-4">Our website uses cookies to enhance your browsing experience. You can manage your cookie preferences through our cookie consent banner at the bottom of your screen.</p>
           <div className="space-y-3">
             <div className="flex items-start gap-3 bg-gray-50 p-4 rounded-lg">
               <span className="w-2 h-2 bg-green-500 rounded-full mt-2 flex-shrink-0"></span>
@@ -209,9 +209,23 @@ const PrivacyPolicy = () => {
                 <p className="text-sm text-gray-600">Help us understand how visitors interact with our site (e.g., Google Analytics).</p>
               </div>
             </div>
+            <div className="flex items-start gap-3 bg-gray-50 p-4 rounded-lg">
+              <span className="w-2 h-2 bg-purple-500 rounded-full mt-2 flex-shrink-0"></span>
+              <div>
+                <strong>Marketing Cookies:</strong>
+                <p className="text-sm text-gray-600">Used to deliver advertisements that are more relevant to you.</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-3 bg-gray-50 p-4 rounded-lg">
+              <span className="w-2 h-2 bg-yellow-500 rounded-full mt-2 flex-shrink-0"></span>
+              <div>
+                <strong>Preferences Cookies:</strong>
+                <p className="text-sm text-gray-600">Allow the website to remember choices you make.</p>
+              </div>
+            </div>
           </div>
           <p className="mt-4 text-sm text-gray-600">
-            <strong>Control:</strong> You can choose to disable cookies through your browser settings, though this may affect the functionality of our website.
+            <strong>Control:</strong> You can manage your cookie preferences at any time by clicking on the cookie consent banner at the bottom of your screen, or through your browser settings. Disabling certain cookies may affect the functionality of our website.
           </p>
         </>
       ),

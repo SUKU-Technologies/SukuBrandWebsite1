@@ -11,6 +11,9 @@ import ScrollToTop from "./components/ScrollToTop";
 // SEO Meta Tags
 import { HelmetProvider } from "react-helmet-async";
 
+// Components
+import CookieConsent from "./components/CookieConsent";
+
 //Lazy-loaded pages components
 const LandingPage = lazy(() => import("./pages/LandingPage"));
 const About = lazy(() => import("./pages/About"));
@@ -106,6 +109,7 @@ function App() {
           </Suspense>
         </BrowserRouter>
       </HelmetProvider>
+      <CookieConsent />
     </>
   );
 }

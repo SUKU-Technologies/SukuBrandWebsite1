@@ -10,6 +10,7 @@ import {
   Mail,
   X,
 } from "lucide-react";
+import { analytics } from "../../services/analytics";
 import contactImage from "../../assets/contactform2.webp";
 
 const IconWrapper = ({ children }) => (
@@ -38,10 +39,20 @@ const ContactForm = () => {
       );
       console.log("SUCCESS!", result);
       toast.success("Message sent successfully!");
+      
+      // Track form submission with analytics
+      analytics.trackFormSubmit("Contact Form");
+      
       form.current.reset(); // Reset form after successful submission
     } catch (error) {
       console.error("FAILED...", error.text);
       toast.success("Failed to send message. Please try again.");
+      
+      // Track failed form submission
+      analytics.trackEvent("form_submit_failed", {
+        form_name: "Contact Form",
+        error_message: error.text
+      });
     } finally {
       setLoading(false); // Stop loading after response
     }
