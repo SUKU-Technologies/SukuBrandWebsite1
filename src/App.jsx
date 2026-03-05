@@ -8,6 +8,7 @@ import RootLayout from "./Layout/RootLayout";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
 
+
 // SEO Meta Tags
 import { HelmetProvider } from "react-helmet-async";
 
@@ -24,6 +25,7 @@ const DigitalVisibility = lazy(() => import("./pages/DigitalVisibility"));
 const SoftwareSolutions = lazy(() => import("./pages/SoftwareSolutions"));
 const CRS = lazy(() => import("./pages/CRS"));
 const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
+import OdooChat from "./components/OdooChat";
 
 function App() {
   const [showLoader, setShowLoader] = useState(false);
@@ -84,6 +86,7 @@ function App() {
 
       {/* Routing with Lazy Loading */}
       <HelmetProvider>
+          <OdooChat />
         <BrowserRouter>
           <ScrollToTop />
           <Suspense fallback={<PageLoading />}>
