@@ -25,7 +25,6 @@ const DigitalVisibility = lazy(() => import("./pages/DigitalVisibility"));
 const SoftwareSolutions = lazy(() => import("./pages/SoftwareSolutions"));
 const CRS = lazy(() => import("./pages/CRS"));
 const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
-import OdooChat from "./components/OdooChat";
 
 function App() {
   const [showLoader, setShowLoader] = useState(false);
@@ -86,7 +85,6 @@ function App() {
 
       {/* Routing with Lazy Loading */}
       <HelmetProvider>
-          <OdooChat />
         <BrowserRouter>
           <ScrollToTop />
           <Suspense fallback={<PageLoading />}>
