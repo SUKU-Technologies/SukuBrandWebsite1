@@ -1,0 +1,5 @@
+# https://www.sukutechnologies.com/robots.txt
+User-agent: *
+Allow: /
+
+Sitemap: https://www.sukutechnologies.com/sitemap.xml

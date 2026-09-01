@@ -1,0 +1,21 @@
+# SUKU Technologies
+
+> SUKU Technologies is a Ghana-based technology company providing digital transformation, software solutions, and digital visibility services for businesses and institutions.
+
+SUKU Technologies helps organizations adopt secure, scalable digital systems — including custom software, cloud platforms, websites, and IT consulting — with a focus on practical business outcomes in Ghana and beyond.
+
+## Pages
+
+- [Home](https://www.sukutechnologies.com/): Overview of SUKU Technologies and core services
+- [About](https://www.sukutechnologies.com/about): Company story, vision, mission, and leadership
+- [Digital Transformation](https://www.sukutechnologies.com/digital-transformation): Consulting and digital transformation services
+- [Software Solutions](https://www.sukutechnologies.com/software-solutions): Custom software, SaaS, and cloud solutions
+- [Digital Visibility](https://www.sukutechnologies.com/digital-visibility): Websites, SEO, and digital presence services
+- [Careers](https://www.sukutechnologies.com/careers): Open roles and working at SUKU Technologies
+- [Contact](https://www.sukutechnologies.com/contact): Contact details and inquiry form
+- [CSR](https://www.sukutechnologies.com/csr): Corporate social responsibility initiatives
+
+## Optional
+
+- [Privacy Policy](https://www.sukutechnologies.com/privacy-policy): Data protection and privacy information
+- [Sitemap](https://www.sukutechnologies.com/sitemap.xml): XML sitemap of public pages
