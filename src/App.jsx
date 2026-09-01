@@ -25,6 +25,8 @@ const DigitalVisibility = lazy(() => import("./pages/DigitalVisibility"));
 const SoftwareSolutions = lazy(() => import("./pages/SoftwareSolutions"));
 const CRS = lazy(() => import("./pages/CRS"));
 const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
+const Blog = lazy(() => import("./pages/Blog"));
+const BlogDetails = lazy(() => import("./pages/BlogDetails"));
 
 function App() {
   const [showLoader, setShowLoader] = useState(false);
@@ -105,6 +107,8 @@ function App() {
                 <Route path="/careers" element={<Careers />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+                <Route path="/blog" element={<Blog />} />
+                <Route path="/blog/:slug" element={<BlogDetails />} />
               </Route>
             </Routes>
           </Suspense>
