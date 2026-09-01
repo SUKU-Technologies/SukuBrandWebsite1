@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Shield, Check } from "lucide-react";
 import experienceIcon from "../assets/feature-icon1.png";
 import dedicatedmembersIcon from "../assets/feature-icon2.png";
 import supportIcon from "../assets/feature-icon3.png";
@@ -23,12 +24,19 @@ const features = [
     description:
       "24/7 expert support tailored to meet the needs of businesses operating in diverse global markets.",
   },
+  {
+    icon: "shield-check",
+    title: "Verified & Trusted",
+    description:
+      "Verification infrastructure that authenticates businesses, professionals, and platforms with confidence.",
+    isLucide: true,
+  },
 ];
 
 const Feature = () => {
   return (
     <div className="absolute left-1/2 -translate-x-1/2 top-[90vh] w-full z-30 px-4 md:px-20">
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
         {features.map((item, index) => (
           <motion.div
             key={index}
@@ -45,12 +53,19 @@ const Feature = () => {
             <div className="relative z-10 flex flex-col items-center">
               {/* Circular Icon */}
               <div className="w-20 h-20 rounded-full bg-blue-200/30 group-hover:bg-white transition duration-300 flex items-center justify-center mb-4 shadow-inner">
-                <img
-                  src={item.icon}
-                  alt={item.title}
-                  className="w-10 h-10 transition duration-300"
-                  loading="lazy"
-                />
+                {item.isLucide ? (
+                  <div className="relative w-10 h-10">
+                    <Shield className="w-10 h-10 text-gray-700" />
+                    <Check className="w-5 h-5 text-blue-600 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
+                  </div>
+                ) : (
+                  <img
+                    src={item.icon}
+                    alt={item.title}
+                    className="w-10 h-10 transition duration-300"
+                    loading="lazy"
+                  />
+                )}
               </div>
 
               <h3 className="text-xl font-semibold mt-2 mb-3 text-gray-800 group-hover:text-white transition">

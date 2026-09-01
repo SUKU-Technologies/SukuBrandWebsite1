@@ -12,28 +12,29 @@ import { Link } from "react-router-dom";
 const services = [
   {
     id: "01",
-    title: "Digital Transformation Solutions",
+    title: "Digital Transformation & AI Evolution",
     description:
-      "We offer tailored analysis, strategy development, and IT upgrades and advanced analytics implementation to enhance efficiency and drive growth.",
+      "Strategic modernization and workforce readiness — we help you plan and adopt the systems that keep you competitive.",
     icon: <FaNetworkWired className="text-blue-800 text-3xl" />,
     link: "/digital-transformation",
     subsections: [
       "Analysis and Consulting",
       "Digital Strategy Development",
-      "Change Management & Training",
-      "Scaling and Support",
+      "Google Workspace Implementation & Migration",
+      "AI Transition & Reskilling Programs",
     ],
   },
   {
     id: "02",
     title: "Software Solutions",
     description:
-      "We design and develop bespoke software solutions and also provide ongoing technical support, regular updates, and bug fixes to ensure software reliability and peak performance.",
+      "Bespoke engineering and dependable upkeep — we build your systems, then keep them running at peak performance.",
     icon: <FaCode className="text-blue-800 text-3xl" />,
     link: "/software-solutions",
     subsections: [
       "Custom Software Development",
       "Web & Mobile Application Development",
+      "Workspace Security, Compliance & Governance",
       "Maintenance & Support Services",
     ],
   },
@@ -41,14 +42,28 @@ const services = [
     id: "03",
     title: "Digital Visibility Services",
     description:
-      "We design and develop professional, user-friendly websites that effectively represent your brand online, optimize them to rank higher on search engines with secure and reliable hosting solutions.",
+      "Brand authority and technical reach — we put you in front of the right audience and keep you there.",
     icon: <FaChartLine className="text-blue-800 text-3xl" />,
     link: "/digital-visibility",
     subsections: [
-      "SEO (Search Engine Optimization)",
-      "Social Media Marketing",
-      "Website Design, Development & Maintenance",
+      "AI-Enhanced SEO (Search Engine Optimization)",
+      "Intelligent Social Media Marketing",
+      "Website Design & Development",
       "Domain & Web Hosting Services",
+    ],
+  },
+  {
+    id: "04",
+    title: "Digital Trust Solutions",
+    description:
+      "Verification infrastructure for the continent — we authenticate the businesses, professionals, and talent you do business with.",
+    icon: <FaCode className="text-blue-800 text-3xl" />,
+    link: "/digital-trust",
+    subsections: [
+      "Trust Infrastructure Deployment",
+      "Kadodo Africa Verification Platform",
+      "Verified Professional Passports",
+
     ],
   },
 ];
@@ -68,15 +83,15 @@ const ServicesHome = () => {
       {/* Heading */}
       <div className="text-center max-w-2xl mx-auto mb-16">
         <h2 className="text-sm font-semibold text-[#2A8ADE]">
-          Our IT Services For Business
+          What We Offer
         </h2>
         <p className="text-2xl md:text-3xl leading-11 font-bold mt-3">
-          Ensuring Your Success Trusted <br /> IT Services Source
+          Solutions Built for Growth, Trust, and Scale 
         </p>
       </div>
 
       {/* Service Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
         {services.map((service, index) => (
           <motion.div
             key={index}
