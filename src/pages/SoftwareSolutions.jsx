@@ -11,11 +11,17 @@ import {
   UserCheck,
   ArrowRight,
   Home,
+  Settings,
+  LifeBuoy,
+  Shield,
+  FileCheck,
 } from "lucide-react";
 import digiImage from "../assets/softwareSolutions.webp";
 import serviceImg1 from "../assets/CSD.webp";
 import serviceImg2 from "../assets/Web & Mobile Application Development.webp";
 import serviceImg3 from "../assets/Maintenance & Support Services.webp";
+import serviceImg4 from "../assets/Ongoing Workspace Support & Administration.webp";
+import serviceImg5 from "../assets/Workspace Security, Compliance & Governance.webp";
 import ContactUs from "../components/ContactUs";
 import { Link, useLocation } from "react-router-dom";
 
@@ -23,6 +29,8 @@ const services = [
   "Custom Software Development",
   "Web & Mobile Application Development",
   "Maintenance & Support Services",
+  "Ongoing Workspace Support & Administration",
+  "Workspace Security, Compliance & Governance",
 ];
 
 const serviceDetails = {
@@ -101,6 +109,57 @@ From scheduled updates to incident resolution, our support services ensure your 
       "Regular updates and security patches",
       "SLA-based support plans",
       "Peace of mind and long-term reliability",
+    ],
+  },
+  "Ongoing Workspace Support & Administration": {
+    description: `
+      A Google Workspace migration is only the beginning — the real value comes from how well it's run day to day. Our Ongoing Workspace Support & Administration service takes that responsibility off your plate, managing user accounts, permissions, storage, and configuration changes as your organization grows and shifts.
+
+      We act as your dedicated Workspace admin team, resolving issues before they disrupt your staff and keeping your environment optimized as new features roll out. Whether it's onboarding new employees, adjusting group access, or troubleshooting sync issues, we ensure your team's daily tools stay reliable — so you can focus on running your business, not managing your inbox infrastructure.
+    `,
+    image: serviceImg4,
+    features: [
+      {
+        icon: Settings,
+        title: "Dedicated Admin Management",
+        desc: "User accounts, permissions, and storage handled proactively, not reactively.",
+      },
+      {
+        icon: LifeBuoy,
+        title: "Fast Issue Resolution",
+        desc: "Sync, access, and configuration problems fixed before they slow your team down.",
+      },
+    ],
+    benefits: [
+      "No in-house IT burden for daily Workspace management",
+      "Faster onboarding for new employees",
+      "A consistently reliable productivity environment",
+
+    ],
+  },
+  "Workspace Security, Compliance & Governance": {
+    description: `
+      Your data is only as secure as the policies governing it. Our Workspace Security, Compliance & Governance service implements advanced access controls, data protection protocols, and audit-ready governance structures so your organization meets global compliance standards — not just internal best practices.
+
+      We go beyond default settings to configure two-factor authentication, data loss prevention rules, and role-based access tailored to your industry's requirements. Paired with staff training on security best practices, this service reduces your exposure to data breaches, insider risk, and compliance failures — giving leadership confidence that governance isn't an afterthought.
+    `,
+    image: serviceImg5,
+    features: [
+      {
+        icon: Shield,
+        title: "Advanced Access Controls",
+        desc: "Role-based permissions and data loss prevention configured to your risk profile.",
+      },
+      {
+        icon: FileCheck,
+        title: "Compliance-Ready Governance",
+        desc: "Audit-friendly structures aligned with global data protection standards.",
+      },
+    ],
+    benefits: [
+      "Reduced risk of data breaches and insider threats",
+      "Compliance readiness for audits and regulations",
+      "Staff trained on real security practices, not just policy documents",
     ],
   },
 };
@@ -226,9 +285,10 @@ const SoftwareSolutions = () => {
           Building Scalable Digital Products for Modern Businesses
         </h2>
         <p className="text-gray-600 text-base font-medium md:text-lg leading-relaxed">
-          We design, build, and maintain digital products that solve real
-          problems. From custom software to mobile applications, we deliver
-          scalable and user-friendly systems built around your business model.
+          We design, build, maintain, and secure digital products that 
+          solve real problems. From custom software to mobile applications 
+          to the systems that keep your workspace running safely, we deliver 
+          scalable, reliable solutions built around your business model.
         </p>
       </motion.div>
 

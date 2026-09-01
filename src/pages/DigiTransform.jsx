@@ -9,12 +9,22 @@ import {
   BookOpen,
   Map,
   UserCheck,
-  ClipboardCheck,Home
+  ClipboardCheck,
+  Home,
+  ArrowRightLeft,
+  Settings,
+  Brain,
+  TrendingUp,
+  LifeBuoy,
+  ExternalLink,
 } from "lucide-react";
 import digiImage from "../assets/digitalTransfrom.webp";
 import serviceImg1 from "../assets/A&C.webp";
 import serviceImg2 from "../assets/Digital Strategy Development.webp";
 import serviceImg3 from "../assets/Change Management & Training.webp";
+import serviceImg4 from "../assets/Google Workspace Implementation & Migration.webp";
+import serviceImg5 from "../assets/AI Transition Programs & Reskilling.webp";
+import serviceImg6 from "../assets/Scaling and Support.webp";
 import ContactUs from "../components/ContactUs";
 import { Link, useLocation } from "react-router-dom"; // grabs the location id from the Link
 
@@ -22,6 +32,9 @@ const services = [
   "Analysis & Consulting",
   "Digital Strategy Development",
   "Change Management & Training",
+  "Google Workspace Implementation & Migration",
+  "AI Transition Programs & Reskilling",
+  "Scaling and Support",
 ];
 
 const serviceDetails = {
@@ -102,6 +115,87 @@ We focus on building an adaptive culture where continuous learning and change ar
       "Long-term success sustainability",
     ],
   },
+
+  "Google Workspace Implementation & Migration": {
+    description: `
+      Moving to a new productivity suite shouldn't disrupt the work that depends on it. Our Google Workspace Implementation & Migration service delivers a structured, low-risk transition — from initial environment setup and domain configuration to full data migration of email, files, and calendars. We plan around your busiest workflows, not around ours, so your team keeps working while the switch happens in the background.
+    
+    Beyond the technical migration, we configure Workspace to match how your organization actually operates: permissions, shared drives, group structures, and security policies tailored to your team size and compliance needs. The result is a secure, cloud-based foundation your business can build on immediately, not a generic default setup.
+      `,
+    image: serviceImg4,
+    features: [
+      {
+        icon: ArrowRightLeft,
+        title: "Seamless Data Migration",
+        desc: "Move email, files, and calendars with zero data loss and minimal downtime.",
+      },
+      {
+        icon: Settings,
+        title: "Custom Configuration & Setup",
+        desc: "Workspace structured around your teams, permissions, and workflows from day one.",
+      },
+    ],
+     benefits: [
+      "Minimal disruption during transition",
+      "Secure, cloud-based collaboration",
+      "Configuration built around your team, not a template",
+
+    ],
+  },
+
+  "AI Transition Programs & Reskilling": {
+    description: `
+      Adopting AI tools is the easy part — getting your workforce to use them well is where most organizations stall. Our AI Transition Programs & Reskilling service bridges that gap. We start by identifying which of your existing workflows are ready for AI augmentation, then design a phased transition plan that introduces new tools without overwhelming your team or disrupting delivery.
+
+      Training is built around your actual processes, not generic AI literacy. We run hands-on modules, role-specific workshops, and ongoing coaching so your staff move from hesitant to confident — turning AI adoption into a genuine productivity gain rather than a source of friction. This service equips your workforce to work with AI, not around it.
+    `,
+    image: serviceImg5,
+    features: [
+      {
+        icon: Brain,
+        title: "Workflow AI-Readiness Assessment",
+        desc: "Identify exactly where AI can reduce effort without adding risk.",
+      },
+      {
+        icon: UserCheck,
+        title: "Role-Specific Upskilling",
+        desc: "Hands-on training modules tailored to how each team actually works.",
+      },
+    ],
+    benefits: [
+      "Faster, lower-friction AI adoption",
+      "A workforce confident using new tools",
+      "Measurable productivity gains from AI integration",
+
+    ],
+  },
+
+  "Scaling and Support": {
+    description: `
+      Growth exposes the cracks in systems that weren't built for it. Our Scaling and Support service provides the infrastructure and ongoing consulting organizations need to grow from a single-market operation to global-enterprise standards — without a costly rebuild every time you outgrow your current setup.
+      
+      We assess where your current systems will bottleneck under growth, then implement infrastructure and processes designed to scale ahead of demand rather than react to it. Paired with continuous advisory support, this service means your technology stays a growth enabler, not a constraint, at every stage of your expansion.
+    `,
+    image: serviceImg6,
+    features: [
+      {
+        icon: TrendingUp,
+        title: "Growth-Ready Infrastructure",
+        desc: "Systems designed to scale ahead of demand, not react to it.",
+      },
+      {
+        icon: LifeBuoy,
+        title: "Continuous Strategic Advisory",
+        desc: "Ongoing consulting so your tech decisions keep pace with your growth.",
+      },
+    ],
+    benefits: [
+      "Infrastructure that scales with you, not against you",
+      "Reduced risk of costly rebuilds",
+      "Ongoing access to strategic guidance as you grow",
+
+    ],
+  },
 };
 
 const DigiTransform = () => {
@@ -109,13 +203,17 @@ const DigiTransform = () => {
 
   const descRef = useRef(null);
   const contentRef = useRef(null);
+  const impactRef = useRef(null);
   const iconsRef = useRef(null);
   const benefitsRef = useRef(null);
+  const webinarRef = useRef(null);
 
   const isDescInView = useInView(descRef, { once: true });
   const isContentInView = useInView(contentRef, { once: true });
+  const isImpactInView = useInView(impactRef, { once: true });
   const isIconsInView = useInView(iconsRef, { once: true });
   const isBenefitsInView = useInView(benefitsRef, { once: true });
+  const isWebinarInView = useInView(webinarRef, { once: true });
 
   // created a value that holds the useLocation function
   const location = useLocation();
@@ -186,7 +284,7 @@ const DigiTransform = () => {
               transition={{ duration: 1 }}
               className="text-white text-center md:text-left   text-3xl sm:text-4xl md:text-6xl font-bold mb-4"
             >
-              Digital Transformation Solutions
+              Digital Transformation & AI Evolution
             </motion.h1>
 
             {/* Breadcrumb box */}
@@ -209,7 +307,7 @@ const DigiTransform = () => {
 
               <span className="text-white">→</span>
               <span className="text-sm text-center text-gray-300">
-                Digital Transformation Solutions
+                Digital Transformation & AI Evolution 
               </span>
             </motion.div>
           </div>
@@ -227,10 +325,10 @@ const DigiTransform = () => {
           Empowering Businesses through Innovation
         </h2>
         <p className="text-gray-600 text-base font-medium md:text-lg leading-relaxed">
-          Our Digital Transformation Solutions help organizations align
-          technology with business goals. From strategic analysis and planning
-          to change enablement and operational agility, we empower you to thrive
-          in the digital era.
+          Our Digital Transformation & AI Evolution services help organizations 
+          align technology and AI with business goals. From strategic analysis 
+          and Workspace migration to AI-enabled reskilling and enterprise scaling, 
+          we empower you to modernize with confidence.
         </p>
       </motion.div>
 
@@ -244,25 +342,6 @@ const DigiTransform = () => {
           transition={{ duration: 0.8 }}
           className="lg:w-2/3 space-y-10"
         >
-          {/* Dynamic Image */}
-          <AnimatePresence mode="wait">
-            <div id={activeService.replace(/\s+/g, "-").toLowerCase()}></div>
-            <motion.img
-              key={activeService}
-              src={current.image}
-              alt={activeService}
-              initial={{ opacity: 0, scale: 0.95, x: 60 }}
-              animate={{ opacity: 1, scale: 1, x: 0 }}
-              exit={{ opacity: 0, scale: 0.95, x: -30 }}
-              transition={{
-                duration: 0.9,
-                ease: [0.22, 1, 0.36, 1],
-                delay: 0.1, // delay entry for better pacing
-              }}
-              className="rounded-md overflow-hidden  w-full h-[400px] object-cover"
-            />
-          </AnimatePresence>
-
           {/* Tab Content */}
           <AnimatePresence mode="wait">
             <motion.div
@@ -288,6 +367,74 @@ const DigiTransform = () => {
                   </p>
                 ))}
             </motion.div>
+          </AnimatePresence>
+
+          {/* Proven Impact Section */}
+          <motion.div
+            ref={impactRef}
+            initial={{ opacity: 0, y: 40 }}
+            animate={isImpactInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.8 }}
+            className="space-y-5"
+          >
+            <h4 className="text-2xl md:text-3xl font-bold text-gray-800 text-center md:text-left">
+              Proven Impact
+            </h4>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+              {[
+                { value: "1,000+", label: "SME Participants Trained" },
+                { value: "8", label: "Regions Across Ghana" },
+                { value: "60%+", label: "Women-Led Businesses Empowered" },
+              ].map((stat, idx) => (
+                <motion.div
+                  key={idx}
+                  className="text-center bg-[#F3F8FF] p-6 rounded shadow-sm"
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ type: "spring", stiffness: 150 }}
+                >
+                  <h3 className="text-3xl font-bold text-[#2A8ADE]">
+                    {stat.value}
+                  </h3>
+                  <p className="text-[#032040] mt-1 text-sm uppercase">
+                    {stat.label}
+                  </p>
+                </motion.div>
+              ))}
+            </div>
+            <p className="text-gray-500 text-sm leading-relaxed text-center md:text-left">
+              Lead implementation partner on the ACP-DiGi Project, delivered in
+              collaboration with the Ghana National Chamber of Commerce and
+              Industry, the European Union, and Agence Française de Développement.
+            </p>
+            <p className="text-center md:text-left">
+              <a
+                href="https://thebftonline.com/article/acp-digi-project-empowers-over-1000-smes-with-digital-skills"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#2A8ADE] hover:underline text-sm inline-flex items-center gap-1"
+              >
+                Read the feature on B&FT <ExternalLink size={14} />
+              </a>
+            </p>
+          </motion.div>
+
+          {/* Dynamic Image */}
+          <AnimatePresence mode="wait">
+            <div id={activeService.replace(/\s+/g, "-").toLowerCase()}></div>
+            <motion.img
+              key={activeService}
+              src={current.image}
+              alt={activeService}
+              initial={{ opacity: 0, scale: 0.95, x: 60 }}
+              animate={{ opacity: 1, scale: 1, x: 0 }}
+              exit={{ opacity: 0, scale: 0.95, x: -30 }}
+              transition={{
+                duration: 0.9,
+                ease: [0.22, 1, 0.36, 1],
+                delay: 0.1, // delay entry for better pacing
+              }}
+              className="rounded-md overflow-hidden  w-full h-[400px] object-cover"
+            />
           </AnimatePresence>
 
           {/* Icon Boxes */}
@@ -411,6 +558,48 @@ const DigiTransform = () => {
           <ContactUs />
         </motion.div>
       </section>
+
+      {/* ==== Webinar Banner Section ==== */}
+      <div className="w-full bg-[#06113C]">
+        <div className="h-[2px] bg-gradient-to-r from-transparent via-blue-500/60 to-transparent"></div>
+      </div>
+      <motion.div
+        ref={webinarRef}
+        initial={{ opacity: 0, y: 40 }}
+        animate={isWebinarInView ? { opacity: 1, y: 0 } : {}}
+        transition={{ duration: 0.8 }}
+        className="w-full bg-[#06113C] py-16 px-4 md:px-10 lg:px-20"
+      >
+        <div className="max-w-3xl mx-auto text-center space-y-5">
+          <p className="text-blue-400 text-sm font-bold tracking-widest uppercase">
+            Free Monthly Webinar
+          </p>
+          <h2 className="text-white text-2xl md:text-4xl font-bold">
+            SUKU Business Enablement Series
+          </h2>
+          <p className="text-gray-300 text-base md:text-lg leading-relaxed">
+            Join business leaders navigating digital transformation in the age
+            of AI. Each month, we host a virtual session on operational
+            efficiency and safe scaling for micro, small, and medium enterprises
+            — free to attend, open to anyone ready to grow smarter.
+          </p>
+          <div className="pt-2">
+            <button className="relative overflow-hidden group bg-blue-500 text-white px-8 py-3 rounded-sm shadow-lg transition-all cursor-pointer font-semibold">
+              <span className="relative z-10 flex items-center gap-2">
+                Register for the Next Session <ArrowRight size={16} />
+              </span>
+              <span className="absolute top-0 left-1/2 w-0 h-full bg-[#06113C] group-hover:w-full group-hover:left-0 transition-all duration-500 ease-in-out"></span>
+              <span className="absolute inset-0 border border-blue-500 rounded-sm group-hover:opacity-100 opacity-0 transition-all duration-500 ease-in-out"></span>
+            </button>
+            <p className="text-gray-400 text-xs mt-3">
+              No cost. No obligation. New session every month.
+            </p>
+          </div>
+        </div>
+      </motion.div>
+      <div className="w-full bg-[#06113C]">
+        <div className="h-[2px] bg-gradient-to-r from-transparent via-blue-500/60 to-transparent"></div>
+      </div>
     </div>
       </>
   );
