@@ -15,6 +15,7 @@ const STATIC_ROUTES = [
   { path: "/digital-transformation", changefreq: "monthly", priority: "0.9", lastmod: "2026-09-27" },
   { path: "/digital-visibility", changefreq: "monthly", priority: "0.9", lastmod: "2026-09-27" },
   { path: "/software-solutions", changefreq: "monthly", priority: "0.9", lastmod: "2026-09-27" },
+  { path: "/digital-trust", changefreq: "monthly", priority: "0.9", lastmod: "2026-09-28" },
   { path: "/csr", changefreq: "monthly", priority: "0.6", lastmod: "2026-09-27" },
   { path: "/careers", changefreq: "weekly", priority: "0.7", lastmod: "2026-09-27" },
   { path: "/contact", changefreq: "monthly", priority: "0.7", lastmod: "2026-09-27" },
@@ -27,6 +28,7 @@ const PAGE_LABELS = {
   "/digital-transformation": "Digital Transformation Solutions",
   "/digital-visibility": "Digital Visibility",
   "/software-solutions": "Software Solutions",
+  "/digital-trust": "Digital Trust Solutions",
   "/csr": "Corporate Social Responsibility",
   "/careers": "Careers",
   "/contact": "Contact",
@@ -49,6 +51,11 @@ const SERVICE_PAGES = {
     name: "Software Solutions",
     description:
       "Custom software, web and mobile applications, and maintenance.",
+  },
+  "/digital-trust": {
+    name: "Digital Trust Solutions",
+    description:
+      "Trust infrastructure and verified professional passports for authenticating businesses and professionals.",
   },
 };
 

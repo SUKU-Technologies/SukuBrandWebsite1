@@ -3,11 +3,6 @@
   "trailingSlash": false,
   "redirects": [
     {
-      "source": "/logo.png",
-      "destination": "/logo.webp",
-      "permanent": true
-    },
-    {
       "source": "/:path*",
       "has": [{ "type": "host", "value": "sukutechnologies.com" }],
       "destination": "https://www.sukutechnologies.com/:path*",

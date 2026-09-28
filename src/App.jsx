@@ -24,6 +24,7 @@ const Careers = lazy(() => import("./pages/Careers"));
 const DigitalTransform = lazy(() => import("./pages/DigiTransform"));
 const DigitalVisibility = lazy(() => import("./pages/DigitalVisibility"));
 const SoftwareSolutions = lazy(() => import("./pages/SoftwareSolutions"));
+const DigitalTrust = lazy(() => import("./pages/DigitalTrust"));
 const CRS = lazy(() => import("./pages/CRS"));
 const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
 const Blog = lazy(() => import("./pages/Blog"));
@@ -101,6 +102,7 @@ export function AppShell() {
             <Route
               path="/software-solutions"
               element={<SoftwareSolutions />} />
+            <Route path="/digital-trust" element={<DigitalTrust />} />
             <Route path="csr" element={<CRS />} />
             <Route path="/careers" element={<Careers />} />
             <Route path="/contact" element={<Contact />} />

@@ -42,12 +42,13 @@ const Hero = () => {
             Empowering Businesses Worldwide
           </h2>
           <h1 className="text-4xl text-center md:text-left md:text-5xl font-bold leading-tight mr-3">
-            Powering Growth with Smart IT Solutions
+            Powering Growth with Smart IT Solutions and Digital Trust
           </h1>
           <p className="text-lg text-gray-200 max-w-lg text-justify">
-            We partner with forward-thinking brands across the globe to deliver
-            technology-driven solutions that spark growth, boost efficiency, and
-            future-proof businesses in the digital era.
+            We partner with forward-thinking brands across the globe to deliver 
+            technology-driven solutions and the verification infrastructure to 
+            back them — that spark growth, boost efficiency, and build lasting 
+            trust in the digital era.
           </p>
 
           {/* CTA Buttons */}

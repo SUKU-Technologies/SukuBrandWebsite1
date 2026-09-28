@@ -22,15 +22,15 @@ import {
 import { Link,useLocation } from "react-router-dom"; // grabs the location id from the Link
 
 const services = [
-  "SEO (Search Engine Optimization)",
-  "Social Media Marketing",
+  "AI-Enhanced SEO (Search Engine Optimization)",
+  "Intelligent Social Media Marketing",
   "Website Design,Development & Maintenance",
   "Domain & Web Hosting Services",
 ];
 
 const serviceDetails = {
-  "SEO (Search Engine Optimization)": {
-    description: `Be found where it matters most. Our SEO service is engineered to boost your visibility across search engines. We focus on improving your site's speed, structure, and relevance to attract organic traffic and convert visitors into loyal customers. With a technical foundation and a strategic content approach, we help your brand rise in search rankings.`,
+  "AI-Enhanced SEO (Search Engine Optimization)": {
+    description: `Be found where it matters most. Our SEO service is engineered to boost your visibility across search engines. We focus on improving your site's speed, structure, and relevance to attract organic traffic and convert visitors into loyal customers. With a technical foundation, a strategic content approach, and predictive analytics that flag ranking opportunities before your competitors spot them, we help your brand rise in search rankings and stay there.`,
     image: serviceImg1,
     features: [
       {
@@ -50,8 +50,8 @@ const serviceDetails = {
       "Higher on-site engagement",
     ],
   },
-  "Social Media Marketing": {
-    description: `Connect with your audience where they spend their time. We create and manage dynamic social strategies that promote engagement, build brand loyalty, and drive real business outcomes. Through platform-specific content, targeted ads, and community interaction, we amplify your digital voice.`,
+  "Intelligent Social Media Marketing": {
+    description: `Connect with your audience where they spend their time. We create and manage dynamic social strategies that promote engagement, build brand loyalty, and drive real business outcomes. Through platform-specific content, targeted ads, and real-time sentiment analysis that tells us what's resonating before a campaign ends — not after — we amplify your digital voice and adjust while it still matters.`,
     image: serviceImg2,
     features: [
       {
@@ -220,7 +220,7 @@ const DigitalVisibility = () => {
               <span className="text-sm text-gray-300">Service</span>
 
               <span className="text-white">→</span>
-              <span className="text-sm text-gray-300">Digital Visibility</span>
+              <span className="text-sm text-gray-300">Digital Visibility Services</span>
             </motion.div>
           </div>
         </div>
@@ -237,8 +237,8 @@ const DigitalVisibility = () => {
           Strategic Solutions to Grow Your Online Presence
         </h2>
         <p className="text-gray-600 text-base font-medium md:text-lg leading-relaxed">
-          Our digital visibility services are tailored to boost your presence
-          across channels and improve customer reach.
+          Our digital visibility services combine AI-driven intelligence with proven strategy to boost your 
+          presence across channels, helping your brand get found, get engaged with, and get remembered.
         </p>
       </motion.div>
 
@@ -377,7 +377,7 @@ const DigitalVisibility = () => {
           <div className="bg-gray-100 p-6 rounded-sm">
             <h3 className="text-xl font-semibold mb-6 relative inline-block text-gray-800">
               <span className="border-b-4 border-blue-600 w-full inline-block p-3">
-                Digital Visibilty
+                Digital Visibility Services
               </span>
             </h3>
             <ul className="space-y-4">

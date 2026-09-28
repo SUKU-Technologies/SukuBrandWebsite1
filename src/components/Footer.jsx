@@ -81,6 +81,10 @@ const Footer = () => {
                   name: "Digital Visibility Services",
                   path: "/digital-visibility",
                 },
+                {
+                  name: "Digital Trust Solutions",
+                  path: "/digital-trust",
+                },
               ].map((item, idx) => (
                 <li
                   key={idx}

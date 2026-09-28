@@ -12,47 +12,57 @@ import { Link } from "react-router-dom";
 const services = [
   {
     id: "01",
-    title: "CONSULTING",
+    title: "Digital Transformation & AI Evolution",
     description:
-      "We support businesses and institutions in adopting secure and scalable digital solutions to improve operational efficiency. Furthermore, we act as a trusted partner providing top-tier IT outsourcing services to the European market, including the private sector, public sector, and agencies such as GIZ, AFD, and Enabel.",
+      "Strategic modernization and workforce readiness — we help you plan and adopt the systems that keep you competitive.",
     icon: <FaNetworkWired className="text-blue-800 text-3xl" />,
     link: "/digital-transformation",
     subsections: [
-      "Digital transformation strategy",
-      "Process digitization & automation",
-      "Technology advisory & implementation",
-      "Cloud adoption planning",
-      "AI readiness & adoption advisory",
-      "IT Outsourcing Services ",
+      "Analysis and Consulting",
+      "Digital Strategy Development",
+      "Google Workspace Implementation & Migration",
+      "AI Transition & Reskilling Programs",
     ],
   },
   {
     id: "02",
     title: "TECHNOLOGY",
     description:
-      "SUKU Technologies builds the secure technological architecture your business needs to scale. Utilizing modern web architectures, robust databases, and cloud platforms, we deliver custom solutions engineered for high performance.",
+      "Bespoke engineering and dependable upkeep — we build your systems, then keep them running at peak performance.",
     icon: <FaCode className="text-blue-800 text-3xl" />,
     link: "/software-solutions",
     subsections: [
-      "Custom software & ERP systems",
-      "SaaS and web platform development",
-      "Cloud deployment & Google Workspace",
-      "AI-powered applications",
-      "Systems integration & automation",
+      "Custom Software Development",
+      "Web & Mobile Application Development",
+      "Workspace Security, Compliance & Governance",
+      "Maintenance & Support Services",
     ],
   },
   {
     id: "03",
     title: "PLATFORMS",
     description:
-      "We design and develop professional, user-friendly websites that effectively represent your brand online, optimize them to rank higher on search engines with secure and reliable hosting solutions.",
+      "Brand authority and technical reach — we put you in front of the right audience and keep you there.",
     icon: <FaChartLine className="text-blue-800 text-3xl" />,
     link: "/digital-visibility",
     subsections: [
-      "Verification & trust ecosystems",
-      "Websites & e-commerce platforms",
-      "Digital visibility solutions",
-      "Training & workforce enablement",
+      "AI-Enhanced SEO (Search Engine Optimization)",
+      "Intelligent Social Media Marketing",
+      "Website Design & Development",
+      "Domain & Web Hosting Services",
+    ],
+  },
+  {
+    id: "04",
+    title: "Digital Trust Solutions",
+    description:
+      "Verification infrastructure for the continent — we authenticate the businesses, professionals, and talent you do business with.",
+    icon: <FaCode className="text-blue-800 text-3xl" />,
+    link: "/digital-trust",
+    subsections: [
+      "Trust Infrastructure Deployment",
+      "Kadodo Africa Verification Platform",
+      "Verified Professional Passports",
     ],
   },
 ];
@@ -72,15 +82,15 @@ const ServicesHome = () => {
       {/* Heading */}
       <div className="text-center max-w-2xl mx-auto mb-16">
         <h2 className="text-sm font-semibold text-[#2A8ADE]">
-          Our IT Services For Business
+          What We Offer
         </h2>
         <p className="text-2xl md:text-3xl leading-11 font-bold mt-3">
-          Ensuring Your Success Trusted <br /> IT Services Source
+          Solutions Built for Growth, Trust, and Scale 
         </p>
       </div>
 
       {/* Service Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
         {services.map((service, index) => (
           <motion.div
             key={index}

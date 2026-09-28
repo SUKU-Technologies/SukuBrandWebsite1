@@ -27,12 +27,10 @@ const NavBar = () => {
   ];
 
   const serviceSubLinks = [
-    {
-      name: "Digital Transformation",
-      path: "/digital-transformation",
-    },
+    { name: "Digital Transformation & AI Evolution", path: "/digital-transformation" },
     { name: "Software Solutions", path: "/software-solutions" },
-    { name: "Digital Visibility", path: "/digital-visibility" },
+    { name: "Digital Visibility Services", path: "/digital-visibility" },
+    { name: "Digital Trust Solutions", path: "/digital-trust" },
   ];
 
   const activeClass = "text-blue-600 font-semibold";
