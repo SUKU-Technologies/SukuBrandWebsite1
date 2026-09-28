@@ -32,7 +32,7 @@ const pageVariants = {
 const About = () => {
   return (
     <>
-      <Helmet>
+      <Helmet defer={false}>
         <title>About SuKu Technologies | Our Story, Vision & Mission</title>
         <meta name="description" content="Learn about SuKu Technologies' journey, vision, mission, and leadership team. Discover our commitment to digital innovation and excellence in Ghana." />
         <meta name="keywords" content="about Sukutech, company story, vision, mission, leadership, Ghana tech company, digital transformation" />

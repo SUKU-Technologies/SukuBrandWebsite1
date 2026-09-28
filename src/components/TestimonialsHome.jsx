@@ -121,7 +121,7 @@ const TestimonialsHome = () => {
               </div>
 
               <div className="w-full h-6  p-3 mb-4 font-bold flex flex-row items-center justify-end hover:text-blue-800">
-                <Link to={item.url} target="_blank">
+                <Link to={item.url} target="_blank" rel="noopener noreferrer">
                   <p>{item.websiteName}</p>
                 </Link>
               </div>

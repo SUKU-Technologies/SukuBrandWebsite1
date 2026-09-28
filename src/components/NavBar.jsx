@@ -20,6 +20,7 @@ const NavBar = () => {
     { name: "Home", path: "/" },
     { name: "About", path: "/about" },
     { name: "Service", path: "/digital-transformation" },
+    { name: "Blog", path: "/blog" },
     { name: "Contact", path: "/contact" },
     { name: "Careers", path: "/careers" },
     { name: "CSR", path: "/csr" },
@@ -54,7 +55,7 @@ const NavBar = () => {
       <nav className="max-w-7xl mx-auto px-4 md:px-8 flex items-center justify-between h-20">
         {/* Logo */}
         <Link to="/" className="flex items-center">
-          <img src={logo} alt="Logo" className="w-35 h-20 object-contain" />
+          <img src={logo} alt="SuKu Technologies" className="w-35 h-20 object-contain" />
         </Link>
 
         {/* Desktop Nav */}
@@ -79,34 +80,30 @@ const NavBar = () => {
                       </motion.div>
                     </div>
 
-                    <AnimatePresence>
-                      {hovering && (
-                        <motion.ul
-                          initial={{ opacity: 0, y: 10 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          exit={{ opacity: 0, y: 10 }}
-                          transition={{ duration: 0.3 }}
-                          className="absolute top-full left-0 mt-3 w-64 bg-gray-50 p-4 shadow-xl rounded-md z-50 overflow-hidden"
-                          onMouseEnter={handleMouseEnter}
-                          onMouseLeave={handleMouseLeave}
-                        >
-                          {serviceSubLinks.map(({ name, path }) => (
-                            <li key={name}>
-                              <NavLink
-                                to={path}
-                                className={({ isActive }) =>
-                                  isActive
-                                    ? activeClass
-                                    : "block px-4 py-2 text-sm text-gray-700 font-medium capitalize hover:bg-blue-50 hover:text-blue-600 transition hover:scale-105"
-                                }
-                              >
-                                {name}
-                              </NavLink>
-                            </li>
-                          ))}
-                        </motion.ul>
-                      )}
-                    </AnimatePresence>
+                    <ul
+                      className={`absolute top-full left-0 mt-3 w-64 bg-gray-50 p-4 shadow-xl rounded-md z-50 overflow-hidden transition-all duration-300 ${
+                        hovering
+                          ? "opacity-100 visible translate-y-0"
+                          : "opacity-0 invisible -translate-y-1 pointer-events-none"
+                      }`}
+                      onMouseEnter={handleMouseEnter}
+                      onMouseLeave={handleMouseLeave}
+                    >
+                      {serviceSubLinks.map(({ name, path }) => (
+                        <li key={name}>
+                          <NavLink
+                            to={path}
+                            className={({ isActive }) =>
+                              isActive
+                                ? activeClass
+                                : "block px-4 py-2 text-sm text-gray-700 font-medium capitalize hover:bg-blue-50 hover:text-blue-600 transition hover:scale-105"
+                            }
+                          >
+                            {name}
+                          </NavLink>
+                        </li>
+                      ))}
+                    </ul>
                   </>
                 ) : (
                   <NavLink
@@ -140,7 +137,12 @@ const NavBar = () => {
 
         {/* Mobile Toggle */}
         <div className="md:hidden">
-          <button onClick={toggleMenu}>
+          <button
+            type="button"
+            onClick={toggleMenu}
+            aria-expanded={isOpen}
+            aria-label={isOpen ? "Close menu" : "Open menu"}
+          >
             {isOpen ? <FiX size={24} /> : <IoEllipsisVertical size={24} />}
           </button>
         </div>

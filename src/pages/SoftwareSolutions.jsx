@@ -153,7 +153,7 @@ const SoftwareSolutions = () => {
   const current = serviceDetails[activeService];
   return (
     <>
-      <Helmet>
+      <Helmet defer={false}>
         <title>Software Solutions | Custom Development, Web & Mobile Apps | SuKu Technologies</title>
         <meta name="description" content="Expert software solutions from SuKu Technologies. Custom software development, web & mobile applications, and maintenance services in Ghana." />
         <meta name="keywords" content="custom software development, web applications, mobile apps, software maintenance, Ghana, technology solutions" />

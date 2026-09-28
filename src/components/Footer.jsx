@@ -28,7 +28,7 @@ const Footer = () => {
           {/* Column 1 */}
           <motion.div className="md:w-1/4" {...slideIn(0)}>
               <Link to='/'>
-                <img className="w-[50%] mb-3 rounded-sm" src={logo} alt=" brand logo" loading="lazy"/>
+                <img className="w-[50%] mb-3 rounded-sm" src={logo} alt="SuKu Technologies" loading="lazy"/>
               </Link>
             <p className="text-sm text-gray-300 leading-relaxed">
               Suku Technologies is a leading technology solutions provider
@@ -54,6 +54,7 @@ const Footer = () => {
                 { name: "About Us", path: "/about" },
                 { name: "Contact", path: "/contact" },
                 { name: "Careers", path: "/careers" },
+                { name: "Blog", path: "/blog" },
               ].map((item, idx) => (
                 <li
                   key={idx}
@@ -102,6 +103,7 @@ const Footer = () => {
               <input
                 type="email"
                 placeholder="Enter Your E-Mail*"
+                aria-label="Email address"
                 className="w-full py-2 px-4 pr-10 rounded bg-[#0B1C47] text-white focus:outline-none"
               />
               <span className="absolute right-3 top-2.5 text-gray-400">
@@ -132,26 +134,31 @@ const Footer = () => {
             {[
               {
                 Icon: Facebook,
+                label: "SuKu Technologies on Facebook",
                 to: "https://web.facebook.com/sukutechnologies",
               },
-              { Icon: Twitter, to: "https://x.com/sukutech_" },
+              { Icon: Twitter, label: "SuKu Technologies on X", to: "https://x.com/sukutech_" },
               {
                 Icon: Instagram,
+                label: "SuKu Technologies on Instagram",
                 to: "https://www.instagram.com/sukutechnologies_/",
               },
               {
                 Icon: Linkedin,
+                label: "SuKu Technologies on LinkedIn",
                 to: "https://www.linkedin.com/company/suku-technologies/posts/",
               },
-            ].map(({Icon, to}, i) => (
-              <Link
-               to={to}
-                key={i}
+            ].map(({Icon, label, to}) => (
+              <a
+                href={to}
+                key={label}
                 target="_blank"
+                rel="noopener noreferrer"
+                aria-label={label}
                 className="p-2 bg-[#0B1C47] rounded-full hover:bg-blue-500 transition"
               >
                 <Icon size={16} className="text-white" />
-              </Link>
+              </a>
             ))}
           </div>
         </motion.div>
@@ -160,6 +167,8 @@ const Footer = () => {
       {/* Scroll to Top */}
       <div className="absolute right-6 bottom-6 animate-[bounce_2s_infinite] cursor-pointer">
         <button
+          type="button"
+          aria-label="Back to top"
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           className="p-2 rounded-full bg-blue-500 hover:bg-white group transition "
         >

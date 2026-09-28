@@ -8,7 +8,7 @@ import JobList from "../components/ForCareersPage/JobList";
 const Careers = () => {
   return (
     <>
-      <Helmet>
+      <Helmet defer={false}>
         <title>Careers at SuKu Technologies | Join Our Team</title>
         <meta name="description" content="Explore career opportunities at SuKu Technologies. Join our team of innovators driving digital transformation in Ghana and beyond." />
         <meta name="keywords" content="careers Sukutech, jobs, employment, Ghana, tech jobs, digital transformation, join team" />

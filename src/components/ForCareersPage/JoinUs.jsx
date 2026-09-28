@@ -13,10 +13,10 @@ const JoinUs = () => {
         <div className="flex flex-col lg:flex-row items-center justify-between relative z-20 h-full">
           {/* Text Content */}
           <div className="flex-1 max-w-lg mb-8 lg:mb-0">
-            <h2 className="text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+            <h1 className="text-5xl lg:text-6xl font-bold mb-6 leading-tight">
               <span className="text-gray-800">Want to </span>
               <span className="text-blue-600"> join us?</span>
-            </h2>
+            </h1>
 
             <p className="text-gray-600 text-lg leading-relaxed mb-8 max-w-md">
               Are you looking for a new challenge in your career path, or

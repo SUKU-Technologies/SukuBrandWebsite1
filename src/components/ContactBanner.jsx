@@ -18,7 +18,7 @@ const ContactBanner = () => {
 
       {/* Content */}
       <div className="relative z-20 flex flex-col items-center justify-center h-full px-4 sm:px-6 text-center text-white">
-        <motion.h1
+        <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -26,7 +26,7 @@ const ContactBanner = () => {
           className="w-full max-w-screen-xl mx-auto px-4 mb-4 text-balance text-[24px] sm:text-3xl md:text-5xl lg:text-6xl font-bold text-white text-center leading-tight"
         >
           Together, We Build Better Business
-        </motion.h1>
+        </motion.h2>
 
         <motion.p
           initial={{ opacity: 0, y: 20 }}

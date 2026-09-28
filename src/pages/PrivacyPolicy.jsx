@@ -254,7 +254,7 @@ const PrivacyPolicy = () => {
 
   return (
     <>
-      <Helmet>
+      <Helmet defer={false}>
         <title>Privacy Policy | SUKU Technologies</title>
         <meta name="description" content="SUKU Technologies Privacy Policy - Learn how we collect, use, and protect your personal data in compliance with Ghana's Data Protection Act 2012 (Act 843)." />
         <meta name="keywords" content="privacy policy, data protection, SUKU Technologies, Ghana Data Protection Act, personal data, cookies" />

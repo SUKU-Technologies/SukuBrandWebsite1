@@ -7,6 +7,7 @@ import { lazy, Suspense, useState, useEffect } from "react";
 import RootLayout from "./Layout/RootLayout";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
+import NotFound from "./pages/NotFound";
 
 
 // SEO Meta Tags
@@ -25,27 +26,18 @@ const DigitalVisibility = lazy(() => import("./pages/DigitalVisibility"));
 const SoftwareSolutions = lazy(() => import("./pages/SoftwareSolutions"));
 const CRS = lazy(() => import("./pages/CRS"));
 const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
+const Blog = lazy(() => import("./pages/Blog"));
+const BlogDetails = lazy(() => import("./pages/BlogDetails"));
 
-function App() {
+export function AppShell() {
   const [showLoader, setShowLoader] = useState(false);
 
   useEffect(() => {
     const visited = localStorage.getItem("visited");
     if (!visited) {
-      setShowLoader(true); // show loader only first time
+      setShowLoader(true);
     }
   }, []);
-
-  if (showLoader) {
-    return (
-      <PageLoading
-        onFinish={() => {
-          localStorage.setItem("visited", "true");
-          setShowLoader(false);
-        }}
-      />
-    );
-  }
 
   return (
     <>
@@ -83,35 +75,54 @@ function App() {
         reverseOrder={false}
       />
 
-      {/* Routing with Lazy Loading */}
-      <HelmetProvider>
-        <BrowserRouter>
-          <ScrollToTop />
-          <Suspense fallback={<PageLoading />}>
-            <Routes>
-              <Route path="/" element={<RootLayout />}>
-                <Route index element={<LandingPage />} />
-                <Route path="/about" element={<About />} />
-                <Route
-                  path="/digital-transformation"
-                  element={<DigitalTransform />} />
-                <Route
-                  path="/digital-visibility"
-                  element={<DigitalVisibility />} />
-                <Route
-                  path="/software-solutions"
-                  element={<SoftwareSolutions />} />
-                <Route path="csr" element={<CRS />} />
-                <Route path="/careers" element={<Careers />} />
-                <Route path="/contact" element={<Contact />} />
-                <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-              </Route>
-            </Routes>
-          </Suspense>
-        </BrowserRouter>
-      </HelmetProvider>
+      {showLoader && (
+        <div className="fixed inset-0 z-[80] bg-white">
+          <PageLoading
+            onFinish={() => {
+              localStorage.setItem("visited", "true");
+              setShowLoader(false);
+            }}
+          />
+        </div>
+      )}
+
+      <ScrollToTop />
+      <Suspense fallback={<PageLoading />}>
+        <Routes>
+          <Route path="/" element={<RootLayout />}>
+            <Route index element={<LandingPage />} />
+            <Route path="/about" element={<About />} />
+            <Route
+              path="/digital-transformation"
+              element={<DigitalTransform />} />
+            <Route
+              path="/digital-visibility"
+              element={<DigitalVisibility />} />
+            <Route
+              path="/software-solutions"
+              element={<SoftwareSolutions />} />
+            <Route path="csr" element={<CRS />} />
+            <Route path="/careers" element={<Careers />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/:slug" element={<BlogDetails />} />
+            <Route path="*" element={<NotFound />} />
+          </Route>
+        </Routes>
+      </Suspense>
       <CookieConsent />
     </>
+  );
+}
+
+function App() {
+  return (
+    <HelmetProvider>
+      <BrowserRouter>
+        <AppShell />
+      </BrowserRouter>
+    </HelmetProvider>
   );
 }
 

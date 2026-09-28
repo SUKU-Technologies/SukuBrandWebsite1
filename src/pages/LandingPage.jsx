@@ -13,7 +13,7 @@ import ContactBanner from "../components/ContactBanner";
 const LandingPage = () => {
   return (
     <>
-      <Helmet>
+      <Helmet defer={false}>
         <title>SuKu Technologies - Home | Digital Innovation & Transformation Experts</title>
         <meta name="description" content="Discover SuKu Technologies, your trusted partner for digital transformation, innovative software solutions, and sustainable business growth in Ghana and beyond." />
         <meta name="keywords" content="digital transformation, software development, technology consulting, Ghana, innovation, business solutions" />

@@ -7,7 +7,7 @@ import ContactForm from "../components/ForContactPage/ContactForm";
 const Contact = () => {
   return (
     <>
-      <Helmet>
+      <Helmet defer={false}>
         <title>Contact SuKu Technologies | Get in Touch</title>
         <meta name="description" content="Get in touch with SuKu Technologies. Reach out for inquiries, partnerships, or to learn more about our digital transformation and software solutions services." />
         <meta name="keywords" content="contact Sukutech, contact form, get in touch, support, inquiry, Ghana, Accra" />

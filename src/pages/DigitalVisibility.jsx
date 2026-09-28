@@ -164,7 +164,7 @@ const DigitalVisibility = () => {
 
   return (
     <>
-      <Helmet>
+      <Helmet defer={false}>
         <title>Digital Visibility Services | SEO, Social Media & Web Development | SuKu Technologies</title>
         <meta name="description" content="Boost your online presence with SuKu Technologies' digital visibility services. Expert SEO, social media marketing, website development, and hosting solutions in Ghana." />
         <meta name="keywords" content="SEO, social media marketing, website development, web hosting, digital marketing, online visibility, Ghana" />

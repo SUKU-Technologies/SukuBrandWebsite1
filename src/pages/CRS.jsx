@@ -30,7 +30,7 @@ const pageVariants = {
 const CRS = () => {
   return (
     <>
-      <Helmet>
+      <Helmet defer={false}>
         <title>Corporate Social Responsibility | CSR Initiatives | SuKu Technologies</title>
         <meta name="description" content="Discover SuKu Technologies' commitment to corporate social responsibility. Learn about our CSR principles, initiatives, and community impact in Ghana and beyond." />
         <meta name="keywords" content="corporate social responsibility, CSR, community impact, sustainability, Ghana, social initiatives" />
@@ -51,7 +51,7 @@ const CRS = () => {
         <div className="relative w-full h-[300px] sm:h-[400px] md:h-[350px]">
           <img
             src={CrsImage}
-            alt="About Banner"
+            alt="Corporate social responsibility at SuKu Technologies"
             className="w-full h-full object-cover"
             loading="lazy"
           />

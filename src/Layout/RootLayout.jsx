@@ -1,24 +1,43 @@
-import React from "react";
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import LocationBanner from "../components/LocationBanner";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
+import JsonLd from "../components/JsonLd";
+import {
+  SITE_ORIGIN,
+  blogFromPath,
+  canonicalUrl,
+  isIndexablePath,
+  normalizePath,
+  structuredData,
+} from "../seo/site";
 
 const RootLayout = () => {
+  const { pathname } = useLocation();
+  const path = normalizePath(pathname);
+  const indexable = isIndexablePath(path);
+  const canonical = canonicalUrl(path);
+  const article = blogFromPath(path);
+
   return (
     <>
-      <Helmet>
-        <title>SuKu Technologies - Digital Transformation & Software Solutions</title>
-        <meta name="description" content="SuKu Technologies offers innovative digital transformation, software solutions, and corporate social responsibility initiatives to drive business growth." />
-        <meta name="keywords" content="digital transformation, software solutions, technology consulting, CSR, Ghana, innovation" />
+      <Helmet defer={false}>
         <meta name="author" content="SuKu Technologies" />
-        <meta property="og:title" content="SuKu Technologies - Digital Transformation & Software Solutions" />
-        <meta property="og:description" content="Innovative digital transformation and software solutions for businesses" />
-        <meta property="og:type" content="website" />
+        <meta name="robots" content={indexable ? "index, follow" : "noindex, follow"} />
+        {indexable && <link rel="canonical" href={canonical} />}
+        <meta property="og:site_name" content="SuKu Technologies" />
+        <meta property="og:type" content={article ? "article" : "website"} />
+        {indexable && <meta property="og:url" content={canonical} />}
         <meta name="twitter:card" content="summary_large_image" />
-        <link rel="canonical" href="https://www.sukutechnologies.com" />
+        {!article && (
+          <meta property="og:image" content={`${SITE_ORIGIN}/logo.webp`} />
+        )}
+        {!article && (
+          <meta name="twitter:image" content={`${SITE_ORIGIN}/logo.webp`} />
+        )}
       </Helmet>
+      {indexable && <JsonLd data={structuredData(path)} />}
       <div className="flex flex-col min-h-screen">
         {/* Top Banner */}
         <LocationBanner />

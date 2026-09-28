@@ -6,7 +6,9 @@ import giving1 from "../../assets/2023-intership-program.webp";
 import giving3 from "../../assets/2022-intership-program.webp";
 import giving4 from "../../assets/suku-about-banner.webp";
 
-Modal.setAppElement("#root");
+if (typeof document !== "undefined") {
+  Modal.setAppElement("#root");
+}
 
 const CrsReport = () => {
   const [reports] = useState([
@@ -83,15 +85,17 @@ const CrsReport = () => {
               transition={{ duration: 0.5 }}
               className="absolute inset-0 flex items-center justify-center bg-[#032040]/50 text-white z-10 opacity-0 group-hover:opacity-100"
             >
-              <button
+              <a
+                href={r.pdfUrl}
                 className="px-5 py-2 bg-[#2A8ADE] rounded-full font-medium cursor-pointer"
                 onClick={(e) => {
-                  e.stopPropagation(); // Prevent triggering card tap
+                  e.preventDefault();
+                  e.stopPropagation();
                   setModalPdf(r.pdfUrl);
                 }}
               >
                 Get Report
-              </button>
+              </a>
             </motion.div>
 
             <div className="p-4 bg-white">

@@ -110,6 +110,7 @@ const ContactForm = () => {
                   type="text"
                   name="name"
                   placeholder="Your Name*"
+                  aria-label="Your name"
                   className="p-3 border border-gray-300 rounded focus:outline-[#0a58ca]"
                   required
                 />
@@ -122,6 +123,7 @@ const ContactForm = () => {
                   type="email"
                   name="email"
                   placeholder="Your E-Mail*"
+                  aria-label="Your email"
                   className="p-3 border border-gray-300 rounded focus:outline-[#0a58ca]"
                   required
                 />
@@ -129,11 +131,13 @@ const ContactForm = () => {
                   type="text"
                   placeholder="Subject"
                   name="title"
+                  aria-label="Subject"
                   className="p-3 border border-gray-300 rounded focus:outline-[#0a58ca]"
                   required
                 />
                 <textarea
                   placeholder="Write A Message..."
+                  aria-label="Message"
                   rows="4"
                   name="message"
                   className="p-3 border border-gray-300 rounded col-span-1 md:col-span-2 focus:outline-[#0a58ca]"

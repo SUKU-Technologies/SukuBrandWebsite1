@@ -12,43 +12,47 @@ import { Link } from "react-router-dom";
 const services = [
   {
     id: "01",
-    title: "Digital Transformation Solutions",
+    title: "CONSULTING",
     description:
-      "We offer tailored analysis, strategy development, and IT upgrades and advanced analytics implementation to enhance efficiency and drive growth.",
+      "We support businesses and institutions in adopting secure and scalable digital solutions to improve operational efficiency. Furthermore, we act as a trusted partner providing top-tier IT outsourcing services to the European market, including the private sector, public sector, and agencies such as GIZ, AFD, and Enabel.",
     icon: <FaNetworkWired className="text-blue-800 text-3xl" />,
     link: "/digital-transformation",
     subsections: [
-      "Analysis and Consulting",
-      "Digital Strategy Development",
-      "Change Management & Training",
-      "Scaling and Support",
+      "Digital transformation strategy",
+      "Process digitization & automation",
+      "Technology advisory & implementation",
+      "Cloud adoption planning",
+      "AI readiness & adoption advisory",
+      "IT Outsourcing Services ",
     ],
   },
   {
     id: "02",
-    title: "Software Solutions",
+    title: "TECHNOLOGY",
     description:
-      "We design and develop bespoke software solutions and also provide ongoing technical support, regular updates, and bug fixes to ensure software reliability and peak performance.",
+      "SUKU Technologies builds the secure technological architecture your business needs to scale. Utilizing modern web architectures, robust databases, and cloud platforms, we deliver custom solutions engineered for high performance.",
     icon: <FaCode className="text-blue-800 text-3xl" />,
     link: "/software-solutions",
     subsections: [
-      "Custom Software Development",
-      "Web & Mobile Application Development",
-      "Maintenance & Support Services",
+      "Custom software & ERP systems",
+      "SaaS and web platform development",
+      "Cloud deployment & Google Workspace",
+      "AI-powered applications",
+      "Systems integration & automation",
     ],
   },
   {
     id: "03",
-    title: "Digital Visibility Services",
+    title: "PLATFORMS",
     description:
       "We design and develop professional, user-friendly websites that effectively represent your brand online, optimize them to rank higher on search engines with secure and reliable hosting solutions.",
     icon: <FaChartLine className="text-blue-800 text-3xl" />,
     link: "/digital-visibility",
     subsections: [
-      "SEO (Search Engine Optimization)",
-      "Social Media Marketing",
-      "Website Design, Development & Maintenance",
-      "Domain & Web Hosting Services",
+      "Verification & trust ecosystems",
+      "Websites & e-commerce platforms",
+      "Digital visibility solutions",
+      "Training & workforce enablement",
     ],
   },
 ];
@@ -127,16 +131,16 @@ const ServicesHome = () => {
             </ul>
 
             {/* Read More with Link */}
-            <div className="mt-4 relative z-10 overflow-hidden">
+            <div className="mt-4 relative z-10 overflow-visible">
               <Link to={service.link}>
                 <motion.div
                   initial={{ x: -20, opacity: 0 }}
                   whileInView={{ x: 0, opacity: 1 }}
                   transition={{ duration: 0.4 }}
-                  className="flex items-center gap-2 text-sm text-white translate-x-[-20px] opacity-0 group-hover:translate-x-0 group-hover:opacity-100 max-sm:translate-x-0 max-sm:opacity-100 transition-all duration-500"
+                  className="flex items-center gap-2 text-sm text-blue-600 font-semibold translate-x-0 opacity-100 group-hover:text-white group-hover:translate-x-0 group-hover:opacity-100 max-sm:translate-x-0 max-sm:opacity-100 transition-all duration-300"
                 >
                   <span>Read More</span>
-                  <FaArrowRight className="text-blue-900 group-hover:text-white text-sm" />
+                  <FaArrowRight className="text-blue-600 group-hover:text-white text-sm transition-colors duration-300" />
                 </motion.div>
               </Link>
             </div>

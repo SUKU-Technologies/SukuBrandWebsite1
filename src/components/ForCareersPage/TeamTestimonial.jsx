@@ -75,9 +75,9 @@ const TeamTestimonial = () => {
           <h3 className="text-red-600 text-sm font-medium uppercase tracking-wider mb-4">
             Team Testimonials
           </h3>
-          <h1 className="text-4xl md:text-5xl font-bold text-blue-900 leading-tight">
+          <h2 className="text-4xl md:text-5xl font-bold text-blue-900 leading-tight">
             What our Team says about us
-          </h1>
+          </h2>
         </div>
 
         {/* Carousel Controls */}

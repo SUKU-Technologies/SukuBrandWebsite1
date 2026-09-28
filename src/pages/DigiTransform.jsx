@@ -153,7 +153,7 @@ const DigiTransform = () => {
 
   return (
     <>
-      <Helmet>
+      <Helmet defer={false}>
         <title>Digital Transformation Solutions | SuKu Technologies</title>
         <meta name="description" content="Expert digital transformation solutions from SuKu Technologies. Our services include analysis & consulting, digital strategy development, and change management & training to drive business growth." />
         <meta name="keywords" content="digital transformation, digital strategy, business consulting, change management, Ghana, technology solutions" />
