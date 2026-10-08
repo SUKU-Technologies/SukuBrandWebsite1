@@ -3,6 +3,61 @@
   "trailingSlash": false,
   "redirects": [
     {
+      "source": "/about-us",
+      "destination": "https://www.sukutechnologies.com/about",
+      "permanent": true
+    },
+    {
+      "source": "/about-us/",
+      "destination": "https://www.sukutechnologies.com/about",
+      "permanent": true
+    },
+    {
+      "source": "/contacts",
+      "destination": "https://www.sukutechnologies.com/contact",
+      "permanent": true
+    },
+    {
+      "source": "/contacts/",
+      "destination": "https://www.sukutechnologies.com/contact",
+      "permanent": true
+    },
+    {
+      "source": "/ceo",
+      "destination": "https://www.sukutechnologies.com/about",
+      "permanent": true
+    },
+    {
+      "source": "/ceo/",
+      "destination": "https://www.sukutechnologies.com/about",
+      "permanent": true
+    },
+    {
+      "source": "/corporate-social-responsibility",
+      "destination": "https://www.sukutechnologies.com/csr",
+      "permanent": true
+    },
+    {
+      "source": "/corporate-social-responsibility/",
+      "destination": "https://www.sukutechnologies.com/csr",
+      "permanent": true
+    },
+    {
+      "source": "/services",
+      "destination": "https://www.sukutechnologies.com/",
+      "permanent": true
+    },
+    {
+      "source": "/services/",
+      "destination": "https://www.sukutechnologies.com/",
+      "permanent": true
+    },
+    {
+      "source": "/index.php",
+      "destination": "https://www.sukutechnologies.com/",
+      "permanent": true
+    },
+    {
       "source": "/:path*",
       "has": [{ "type": "host", "value": "sukutechnologies.com" }],
       "destination": "https://www.sukutechnologies.com/:path*",
